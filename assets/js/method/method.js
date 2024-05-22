@@ -126,3 +126,43 @@ export function sapXepChuoiTangDan(arr) {
     arr.sort((a, b) => a - b);
     return arr;
 }
+
+/**
+ * Hàm tìm số Nguyên tố
+ * @param {*} number number
+ * @returns Trả về kết quả xem số kiểm tra có phải là số nguyên tố hay không
+ */
+export function timSoNT(number) {
+    let sNT = true;
+
+    if (number < 2) {
+        sNT = false;
+    } else {
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                sNT = false;
+                break;
+            }
+        }
+    }
+
+    return sNT;
+}
+
+/**
+ * Hàm tìm số nguyên tố đầu tiên trong chuỗi
+ * @param {*} arr chuỗi số
+ * @returns Trả về số nguyên tố đầu tiên trong chuỗi
+ */
+export function timSoNToDauTienTrongChuoi(arr) {
+    let soNT = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (timSoNT(arr[i])) {
+            soNT = arr[i];
+            break;
+        }
+    }
+
+    return soNT;
+}

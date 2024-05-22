@@ -1,4 +1,4 @@
-import { addArr, resetInput, tinhTongSoDuongChuoi, demSoDuongTrongChuoi, timSoNhoNhatTrongChuoi, timSoDuongNhoNhatTrongChuoi, timSoChanCuoiCungTrongChuoi, doiViTriTrongChuoi, sapXepChuoiTangDan } from './method/method.js';
+import { addArr, resetInput, tinhTongSoDuongChuoi, demSoDuongTrongChuoi, timSoNhoNhatTrongChuoi, timSoDuongNhoNhatTrongChuoi, timSoChanCuoiCungTrongChuoi, doiViTriTrongChuoi, sapXepChuoiTangDan, timSoNToDauTienTrongChuoi } from './method/method.js';
 
 let chuoiSo = [];
 let btnThemSo = document.querySelector('#btnThemSo');
@@ -28,6 +28,9 @@ let kqDoiCho = document.querySelector('#kqDoiCho');
 
 let btnSapXepTangDan = document.querySelector('#btnSapXepTangDan');
 let kqSapXepTangDan = document.querySelector('#kqSapXepTangDan');
+
+let btnTimSoNguyenToDauTien = document.querySelector('#btnTimSoNguyenToDauTien');
+let kqTimSoNguyenToDauTien = document.querySelector('#kqTimSoNguyenToDauTien');
 
 btnThemSo.addEventListener('click', () => {
     let number = Number(soN.value)
@@ -92,4 +95,11 @@ btnSapXepTangDan.addEventListener('click', () => {
     let newArr = sapXepChuoiTangDan(chuoiSo);
 
     kqSapXepTangDan.innerHTML = `Chuỗi sau khi sắp xếp tăng dần: ${newArr}`;
+});
+
+// BT8
+btnTimSoNguyenToDauTien.addEventListener('click', () => {
+    let ketQua = timSoNToDauTienTrongChuoi(chuoiSo);
+
+    kqTimSoNguyenToDauTien.innerHTML = `Số nguyên tố đầu tiên: ${ketQua}`;
 });
