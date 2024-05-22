@@ -204,3 +204,15 @@ export function soSanh(arr) {
     return soDuong > soAm ? 'Số dương > số âm' : 'Số âm > số dương';
 }
 
+/**
+ * Hàm nhận vào một chuỗi in ra một chuỗi theo dạng UpperCase
+ * @param {*} string chuỗi
+ * @returns chuỗi mới có định dạng UpperCase
+ */
+function upperCase(string) {
+    let newStr = string.split(' ');
+    let ketQua = newStr.map(newStr => newStr.charAt(0).toUpperCase() + newStr.slice(1)).join('');
+
+    return ketQua;
+}
+
