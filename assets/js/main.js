@@ -1,4 +1,4 @@
-import { addArr, resetInput, tinhTongSoDuongChuoi, demSoDuongTrongChuoi } from './method/method.js';
+import { addArr, resetInput, tinhTongSoDuongChuoi, demSoDuongTrongChuoi, timSoNhoNhatTrongChuoi } from './method/method.js';
 
 let chuoiSo = [];
 let btnThemSo = document.querySelector('#btnThemSo');
@@ -11,6 +11,9 @@ let kqTinhTong = document.querySelector('#kqTinhTong');
 
 let btnDemSoDuong = document.querySelector('#btnDemSoDuong');
 let kqDemSoDuong = document.querySelector('#kqDemSoDuong');
+
+let btnTimSoNhoNhat = document.querySelector('#btnTimSoNhoNhat');
+let kqTimSoNhoNhat = document.querySelector('#kqTimSoNhoNhat');
 
 btnThemSo.addEventListener('click', () => {
     let number = Number(soN.value)
@@ -33,9 +36,15 @@ btnTinhTong.addEventListener('click', () => {
 });
 
 // BT2
-
 btnDemSoDuong.addEventListener('click', () => {
     let ketQua = demSoDuongTrongChuoi(chuoiSo);
 
     kqDemSoDuong.innerHTML = `Số lượng số dương: ${ketQua}`;
+});
+
+// BT3
+btnTimSoNhoNhat.addEventListener('click', ()=>{
+    let ketQua = timSoNhoNhatTrongChuoi(chuoiSo);
+
+    kqTimSoNhoNhat.innerHTML = `Số nhỏ nhất: ${ketQua}`;
 });

@@ -26,6 +26,11 @@ export function tinhTongSoDuongChuoi(arr) {
     return tong > 0 ? tong : 0;
 }
 
+/**
+ * Hàm đếm số lượng dố dương trong chuỗi
+ * @param {*} arr chuỗi số
+ * @returns Trả về tổng số lượng số dương có trong một chuỗi
+ */
 export function demSoDuongTrongChuoi(arr) {
     let dem = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -34,4 +39,21 @@ export function demSoDuongTrongChuoi(arr) {
         }
     }
     return dem;
+}
+
+/**
+ * Hàm tìm và trả về số nhỏ nhất trong chuỗi bao gồm số âm
+ * @param {*} arr chuỗi số
+ * @returns Trả về số nhỏ nhất trong chuỗi
+ */
+export function timSoNhoNhatTrongChuoi(arr) {
+    let minNumber = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < minNumber) {
+            minNumber = arr[i];
+        }
+    }
+
+    return minNumber;
 }
