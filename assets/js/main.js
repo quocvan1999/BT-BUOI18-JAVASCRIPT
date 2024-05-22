@@ -1,4 +1,4 @@
-import { addArr, resetInput, tinhTongSoDuongChuoi, demSoDuongTrongChuoi, timSoNhoNhatTrongChuoi, timSoDuongNhoNhatTrongChuoi, timSoChanCuoiCungTrongChuoi, doiViTriTrongChuoi } from './method/method.js';
+import { addArr, resetInput, tinhTongSoDuongChuoi, demSoDuongTrongChuoi, timSoNhoNhatTrongChuoi, timSoDuongNhoNhatTrongChuoi, timSoChanCuoiCungTrongChuoi, doiViTriTrongChuoi, sapXepChuoiTangDan } from './method/method.js';
 
 let chuoiSo = [];
 let btnThemSo = document.querySelector('#btnThemSo');
@@ -26,6 +26,8 @@ let viTriSo2 = document.querySelector('#viTriSo2');
 let btnDoiCho = document.querySelector('#btnDoiCho');
 let kqDoiCho = document.querySelector('#kqDoiCho');
 
+let btnSapXepTangDan = document.querySelector('#btnSapXepTangDan');
+let kqSapXepTangDan = document.querySelector('#kqSapXepTangDan');
 
 btnThemSo.addEventListener('click', () => {
     let number = Number(soN.value)
@@ -83,4 +85,11 @@ btnDoiCho.addEventListener("click", () => {
     let newArr = doiViTriTrongChuoi(chuoiSo, viTri1, viTri2);
 
     kqDoiCho.innerHTML = `Chuỗi sau khi đổi vị trí: ${newArr}`;
+});
+
+// BT7
+btnSapXepTangDan.addEventListener('click', () => {
+    let newArr = sapXepChuoiTangDan(chuoiSo);
+
+    kqSapXepTangDan.innerHTML = `Chuỗi sau khi sắp xếp tăng dần: ${newArr}`;
 });

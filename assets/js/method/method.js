@@ -100,6 +100,13 @@ export function timSoChanCuoiCungTrongChuoi(arr) {
     return soChan;
 }
 
+/**
+ * Hàm đổi vị trí của 2 phần từ trong mảng cho nhau
+ * @param {*} arr chuỗi
+ * @param {*} viTri1 index 1
+ * @param {*} viTri2 index 2
+ * @returns Trả về chuỗi mới với 2 vị trí đã đổi giá trị cho nhau
+ */
 export function doiViTriTrongChuoi(arr, viTri1, viTri2) {
     let value1 = arr[viTri1];
     let value2 = arr[viTri2];
@@ -107,5 +114,15 @@ export function doiViTriTrongChuoi(arr, viTri1, viTri2) {
     arr[viTri1] = value2;
     arr[viTri2] = value1;
 
+    return arr;
+}
+
+/**
+ * Hàm sắp xếp một chuỗi tăng dần
+ * @param {*} arr chuỗi
+ * @returns Trả về một chuỗi mới được sắp xếp tăng dần
+ */
+export function sapXepChuoiTangDan(arr) {
+    arr.sort((a, b) => a - b);
     return arr;
 }
