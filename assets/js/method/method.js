@@ -47,11 +47,31 @@ export function demSoDuongTrongChuoi(arr) {
  * @returns Trả về số nhỏ nhất trong chuỗi
  */
 export function timSoNhoNhatTrongChuoi(arr) {
-    let minNumber = 0;
+    let minNumber;
 
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] < minNumber) {
+        if (minNumber === undefined) {
             minNumber = arr[i];
+        } else if (arr[i] < minNumber) {
+            minNumber = arr[i];
+        } else {
+            continue;
+        }
+    }
+
+    return minNumber;
+}
+
+export function timSoDuongNhoNhatTrongChuoi(arr) {
+    let minNumber;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (minNumber === undefined) {
+            minNumber = arr[i];
+        } else if (arr[i] > 0 && arr[i] < minNumber) {
+            minNumber = arr[i];
+        } else {
+            continue;
         }
     }
 
