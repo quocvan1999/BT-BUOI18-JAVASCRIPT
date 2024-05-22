@@ -1,4 +1,4 @@
-import { addArr, resetInput, tinhTongSoDuongChuoi, demSoDuongTrongChuoi, timSoNhoNhatTrongChuoi, timSoDuongNhoNhatTrongChuoi, timSoChanCuoiCungTrongChuoi } from './method/method.js';
+import { addArr, resetInput, tinhTongSoDuongChuoi, demSoDuongTrongChuoi, timSoNhoNhatTrongChuoi, timSoDuongNhoNhatTrongChuoi, timSoChanCuoiCungTrongChuoi, doiViTriTrongChuoi } from './method/method.js';
 
 let chuoiSo = [];
 let btnThemSo = document.querySelector('#btnThemSo');
@@ -20,6 +20,11 @@ let kqTimSoDuongNhoNhat = document.querySelector('#kqTimSoDuongNhoNhat');
 
 let btnTimSoChanCuoiCung = document.querySelector('#btnTimSoChanCuoiCung');
 let kqTimSoChanCuoiCung = document.querySelector('#kqTimSoChanCuoiCung');
+
+let viTriSo1 = document.querySelector('#viTriSo1');
+let viTriSo2 = document.querySelector('#viTriSo2');
+let btnDoiCho = document.querySelector('#btnDoiCho');
+let kqDoiCho = document.querySelector('#kqDoiCho');
 
 
 btnThemSo.addEventListener('click', () => {
@@ -68,4 +73,14 @@ btnTimSoChanCuoiCung.addEventListener('click', () => {
     let ketQua = timSoChanCuoiCungTrongChuoi(chuoiSo);
 
     kqTimSoChanCuoiCung.innerHTML = `Số chẵn cuối cùng: ${ketQua}`;
+});
+
+// BT6
+btnDoiCho.addEventListener("click", () => {
+    let viTri1 = Number(viTriSo1.value);
+    let viTri2 = Number(viTriSo2.value);
+
+    let newArr = doiViTriTrongChuoi(chuoiSo, viTri1, viTri2);
+
+    kqDoiCho.innerHTML = `Chuỗi sau khi đổi vị trí: ${newArr}`;
 });

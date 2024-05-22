@@ -83,6 +83,11 @@ export function timSoDuongNhoNhatTrongChuoi(arr) {
     return minNumber;
 }
 
+/**
+ * Hàm tìm số chẵn nằm ở vị trị cuối cùng trong 1 chuỗi
+ * @param {*} arr chuỗi số
+ * @returns Trả về số chẵn cuối cùng trong 1 chuỗi
+ */
 export function timSoChanCuoiCungTrongChuoi(arr) {
     let soChan = 0;
 
@@ -93,4 +98,14 @@ export function timSoChanCuoiCungTrongChuoi(arr) {
     }
 
     return soChan;
+}
+
+export function doiViTriTrongChuoi(arr, viTri1, viTri2) {
+    let value1 = arr[viTri1];
+    let value2 = arr[viTri2];
+
+    arr[viTri1] = value2;
+    arr[viTri2] = value1;
+
+    return arr;
 }
