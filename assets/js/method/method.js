@@ -62,6 +62,11 @@ export function timSoNhoNhatTrongChuoi(arr) {
     return minNumber;
 }
 
+/**
+ * Hàm tìm và trả về số nhỏ nhất là số dương có trong chuỗi
+ * @param {*} arr chuỗi số
+ * @returns Trả về số nhỏ nhất là số dương
+ */
 export function timSoDuongNhoNhatTrongChuoi(arr) {
     let minNumber;
 
@@ -76,4 +81,16 @@ export function timSoDuongNhoNhatTrongChuoi(arr) {
     }
 
     return minNumber;
+}
+
+export function timSoChanCuoiCungTrongChuoi(arr) {
+    let soChan = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            soChan = arr[i];
+        }
+    }
+
+    return soChan;
 }

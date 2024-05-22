@@ -1,4 +1,4 @@
-import { addArr, resetInput, tinhTongSoDuongChuoi, demSoDuongTrongChuoi, timSoNhoNhatTrongChuoi, timSoDuongNhoNhatTrongChuoi } from './method/method.js';
+import { addArr, resetInput, tinhTongSoDuongChuoi, demSoDuongTrongChuoi, timSoNhoNhatTrongChuoi, timSoDuongNhoNhatTrongChuoi, timSoChanCuoiCungTrongChuoi } from './method/method.js';
 
 let chuoiSo = [];
 let btnThemSo = document.querySelector('#btnThemSo');
@@ -17,6 +17,9 @@ let kqTimSoNhoNhat = document.querySelector('#kqTimSoNhoNhat');
 
 let btnTimSoDuongNhoNhat = document.querySelector('#btnTimSoDuongNhoNhat');
 let kqTimSoDuongNhoNhat = document.querySelector('#kqTimSoDuongNhoNhat');
+
+let btnTimSoChanCuoiCung = document.querySelector('#btnTimSoChanCuoiCung');
+let kqTimSoChanCuoiCung = document.querySelector('#kqTimSoChanCuoiCung');
 
 
 btnThemSo.addEventListener('click', () => {
@@ -58,4 +61,11 @@ btnTimSoDuongNhoNhat.addEventListener('click', () => {
     let ketQua = timSoDuongNhoNhatTrongChuoi(chuoiSo);
 
     kqTimSoDuongNhoNhat.innerHTML = `Số dương nhỏ nhất: ${ketQua}`;
+});
+
+// BT5
+btnTimSoChanCuoiCung.addEventListener('click', () => {
+    let ketQua = timSoChanCuoiCungTrongChuoi(chuoiSo);
+
+    kqTimSoChanCuoiCung.innerHTML = `Số chẵn cuối cùng: ${ketQua}`;
 });
