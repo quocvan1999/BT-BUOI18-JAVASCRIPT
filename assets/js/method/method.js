@@ -25,3 +25,13 @@ export function tinhTongSoDuongChuoi(arr) {
     }
     return tong > 0 ? tong : 0;
 }
+
+export function demSoDuongTrongChuoi(arr) {
+    let dem = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
+            dem++;
+        }
+    }
+    return dem;
+}
