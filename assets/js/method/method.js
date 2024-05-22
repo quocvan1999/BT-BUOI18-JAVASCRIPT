@@ -1,8 +1,8 @@
 /**
- * Hàm thêm dữ liệu vào một chuỗi
- * @param {*} arr Chuỗi cần thêm dữ liệu
- * @param {*} data Dữ liệu cần thêm vào chuỗi
- * @returns Trả về một chuỗi đã thêm dữ liệu
+ * Hàm thêm dữ liệu vào một mảng
+ * @param {*} arr mảng cần thêm dữ liệu
+ * @param {*} data Dữ liệu cần thêm vào mảng
+ * @returns Trả về một mảng đã thêm dữ liệu
  */
 export function addArr(arr, data) {
     return arr.push(data);
@@ -27,9 +27,9 @@ export function tinhTongSoDuongChuoi(arr) {
 }
 
 /**
- * Hàm đếm số lượng dố dương trong chuỗi
- * @param {*} arr chuỗi số
- * @returns Trả về tổng số lượng số dương có trong một chuỗi
+ * Hàm đếm số lượng dố dương trong mảng
+ * @param {*} arr mảng số
+ * @returns Trả về tổng số lượng số dương có trong một mảng
  */
 export function demSoDuongTrongChuoi(arr) {
     let dem = 0;
@@ -42,9 +42,9 @@ export function demSoDuongTrongChuoi(arr) {
 }
 
 /**
- * Hàm tìm và trả về số nhỏ nhất trong chuỗi bao gồm số âm
- * @param {*} arr chuỗi số
- * @returns Trả về số nhỏ nhất trong chuỗi
+ * Hàm tìm và trả về số nhỏ nhất trong mảng bao gồm số âm
+ * @param {*} arr mảng số
+ * @returns Trả về số nhỏ nhất trong mảng
  */
 export function timSoNhoNhatTrongChuoi(arr) {
     let minNumber;
@@ -63,8 +63,8 @@ export function timSoNhoNhatTrongChuoi(arr) {
 }
 
 /**
- * Hàm tìm và trả về số nhỏ nhất là số dương có trong chuỗi
- * @param {*} arr chuỗi số
+ * Hàm tìm và trả về số nhỏ nhất là số dương có trong mảng
+ * @param {*} arr mảng số
  * @returns Trả về số nhỏ nhất là số dương
  */
 export function timSoDuongNhoNhatTrongChuoi(arr) {
@@ -84,9 +84,9 @@ export function timSoDuongNhoNhatTrongChuoi(arr) {
 }
 
 /**
- * Hàm tìm số chẵn nằm ở vị trị cuối cùng trong 1 chuỗi
- * @param {*} arr chuỗi số
- * @returns Trả về số chẵn cuối cùng trong 1 chuỗi
+ * Hàm tìm số chẵn nằm ở vị trị cuối cùng trong 1 mảng
+ * @param {*} arr mảng số
+ * @returns Trả về số chẵn cuối cùng trong 1 mảng
  */
 export function timSoChanCuoiCungTrongChuoi(arr) {
     let soChan = 0;
@@ -102,10 +102,10 @@ export function timSoChanCuoiCungTrongChuoi(arr) {
 
 /**
  * Hàm đổi vị trí của 2 phần từ trong mảng cho nhau
- * @param {*} arr chuỗi
+ * @param {*} arr mảng
  * @param {*} viTri1 index 1
  * @param {*} viTri2 index 2
- * @returns Trả về chuỗi mới với 2 vị trí đã đổi giá trị cho nhau
+ * @returns Trả về mảng mới với 2 vị trí đã đổi giá trị cho nhau
  */
 export function doiViTriTrongChuoi(arr, viTri1, viTri2) {
     let value1 = arr[viTri1];
@@ -118,9 +118,9 @@ export function doiViTriTrongChuoi(arr, viTri1, viTri2) {
 }
 
 /**
- * Hàm sắp xếp một chuỗi tăng dần
- * @param {*} arr chuỗi
- * @returns Trả về một chuỗi mới được sắp xếp tăng dần
+ * Hàm sắp xếp một mảng tăng dần
+ * @param {*} arr mảng
+ * @returns Trả về một mảng mới được sắp xếp tăng dần
  */
 export function sapXepChuoiTangDan(arr) {
     arr.sort((a, b) => a - b);
@@ -150,9 +150,9 @@ export function timSoNT(number) {
 }
 
 /**
- * Hàm tìm số nguyên tố đầu tiên trong chuỗi
- * @param {*} arr chuỗi số
- * @returns Trả về số nguyên tố đầu tiên trong chuỗi
+ * Hàm tìm số nguyên tố đầu tiên trong mảng
+ * @param {*} arr mảng số
+ * @returns Trả về số nguyên tố đầu tiên trong mảng
  */
 export function timSoNToDauTienTrongChuoi(arr) {
     let soNT = 0;
@@ -166,3 +166,41 @@ export function timSoNToDauTienTrongChuoi(arr) {
 
     return soNT;
 }
+
+/**
+ * Hàm đếm số lượng số nguyên trong mảng
+ * @param {*} arr mảng số
+ * @returns Trả về tổng số lượng số nguyên trong mảng
+ */
+export function timSoNguyen(arr) {
+    let dem = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (Number.isInteger(arr[i])) {
+            dem += 1;
+        }
+    }
+
+    return dem;
+}
+
+/**
+ * Hàm so sánh số lượng số âm và số dương trong mảng
+ * @param {*} arr 
+ * @return Trả về 
+ */
+export function soSanh(arr) {
+    let soDuong = 0;
+    let soAm = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
+            soDuong += 1;
+        } else {
+            soAm += 1;
+        }
+    }
+
+    return soDuong > soAm ? 'Số dương > số âm' : 'Số âm > số dương';
+}
+
