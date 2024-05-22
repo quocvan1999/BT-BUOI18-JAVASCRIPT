@@ -1,0 +1,13 @@
+:root {
+    --color1: #EDF2F9;
+}
+
+body {
+    background: var(--color1);
+}
+
+.backgroundBody {
+    background: url('../img/corner-4.png');
+    background-size: cover;
+    background-position: top center;
+}
